@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History of AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="timeline">
+    <ul>
+        <li>What is AI?</li>
+        <li>17–18th Century</li>
+        <li class="active">1950s</li>
+        <li>2025 & Beyond</li>
+    </ul>
+</div>
+<section class="hero-section">
+    <nav class="navbar">
+        <ul>
+            <li><a href="#section1">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#earlyIdeas">History</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <img src="https://scitechdaily.com/images/Left-Right-Brain-Signals.gif" alt="brain">
+    
+    <div id="section1">
+        <div class="title">
+            <h1>History of AI</h1>
+        </div>
+        
+    </div>
+</section>
+
+<section id="about" class="content-section">
+        <div class="text-with-image">
+        <div class="text-block">
+        
+        <h2 class="what">What is AI?</h2>
+        <div class="text1">
+        <p>
+        a branch of computer science focused on creating machines capable of performing tasks that typically require human intelligence, such as learning, reasoning, problem-solving, and perception. 
+        AI systems learn from large amounts of data and algorithms to identify patterns and make decisions or generate new content without being explicitly programmed for every specific scenario.</p>
+        </div>
+        </div>
+            
+        <div class="image-block">
+        <img src="https://incubator.ucf.edu/wp-content/uploads/2023/07/artificial-intelligence-new-technology-science-futuristic-abstract-human-brain-ai-technology-cpu-central-processor-unit-chipset-big-data-machine-learning-cyber-mind-domination-generative-ai-scaled-1-1500x1000.jpg" alt="Futuristic AI brain">
+    </div>
+</div>
+</section>      
+
+
+<section id="earlyIdeas" class="content section">
+        <div class="text-with-image">
+        <div class="text-block"> 
+        
+        <h2 class="ideas">Early Ideas</h2>
+        <div class="text2">
+        <p>
+        The earliest ideas of artificial intelligence appeared long before computers existed. 
+        Ancient civilizations created myths about mechanical beings brought to life, reflecting 
+        humanity’s early fascination with creating intelligent machines. Philosophers like Aristotle 
+        explored the idea of formal logic, laying the groundwork for how modern computers process 
+        information. Later, during the 17th and 18th centuries, inventors such as Leibniz and 
+        Pascal built early calculating machines that demonstrated how human reasoning could be 
+        translated into mechanical processes. These early ideas did not create real AI, but they 
+        formed the foundation of mathematical logic and the concept of programmable machines that 
+        would eventually make artificial intelligence possible. </p>
+        </div>
+        </div>
+
+        <div class="image-block"> 
+        <img src="http://www.gwleibniz.com/calculator/images/calculator.jpg" alt="Leibniz">
+    </div>
+
+</div>
+</section>
+
+   
+<section id="firstAI" class="content-section">
+        <div class="text-with-image">
+        <div class="text-block">
+        
+        <h2>First AI</h2>
+        <div class="text3">
+        <p>
+        The modern field of artificial intelligence officially began in the 1950s, when researchers 
+        first attempted to create machines that could solve problems and think logically. In 1956, 
+        a group of scientists at the Dartmouth Conference proposed that human intelligence could be 
+        described so precisely that a machine could be made to simulate it. Early AI programs, such 
+        as those built by Allen Newell and Herbert Simon, could solve mathematical proofs and play 
+        simple games like checkers. These systems were limited, but they showed that computers could 
+        learn patterns and make decisions. Throughout the 1960s and 1970s, AI research grew rapidly, 
+        leading to the creation of expert systems—programs designed to mimic the decision-making 
+        abilities of human specialists. While early excitement eventually slowed due to technical 
+        challenges, these early breakthroughs proved that machine intelligence was possible. </p>
+        </div>
+        </div>
+
+        <div class="image-block">
+        <img src="https://cdn.prod.website-files.com/60ab0571dc2b4b3a7165c912/67077c7bcd7ce44bad4703e5_619f35742f72f52d899482b1_loffit-herbert-a-simon-el-sucesor-espiritual-de-alan-turing-03.jpeg" alt="dudes">
+    </div>
+
+</div>
+</section>
+
+<section id="modern" class="content-section">
+        <div class="text-with-image">
+        <div class="text-block">
+		
+        <h2>Modern Applications</h2>
+        <div class="text4">
+        <p>
+        Today, artificial intelligence plays an essential role in everyday life, often in ways 
+        people don’t even notice. Modern AI is powered by machine learning and deep learning, 
+        technologies that allow computers to analyze huge amounts of data and improve over time. 
+        This has led to major advancements in fields like healthcare, where AI can detect diseases 
+        through medical images, and transportation, where self-driving cars use sensors and 
+        algorithms to navigate roads. AI also powers voice assistants, recommendation systems on 
+        platforms like Netflix and YouTube, fraud detection in banking, and even the development 
+        of new scientific discoveries. As AI continues to evolve, it is becoming one of the most 
+        transformative technologies of the 21st century, shaping how people work, communicate, 
+        and solve complex problems. </p>
+        </div>
+        </div>
+
+        <div class="image-block"> 
+        <img src="https://i0.wp.com/www.icoderzsolutions.com/blog/wp-content/uploads/2025/06/Top-Artificial-Intelligence-Companies.png?w=1024&ssl=1" alt="new AIs">
+    </div>
+        
+</div>
+	</section>
+
+<script src="javascript.js"></script>
+
+<script>
+
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 100) {
+            document.body.classList.add('scrolled');
+        } else {
+            document.body.classList.remove('scrolled');
+        }
+    });
+</script>
+
+<script>
+window.addEventListener('scroll', function() {
+    const sections = ['about', 'earlyIdeas', 'firstAI', 'modern'];
+    const items = document.querySelectorAll('.timeline li');
+
+    let current = 0;
+
+    sections.forEach((id, i) => {
+        const section = document.getElementById(id);
+        if (section && section.getBoundingClientRect().top <= 250) {
+            current = i;
+        }
+    });
+
+    items.forEach((item, i) => {
+        item.classList.toggle('active', i === current);
+    });
+});
+</script>
+
+
+</body>
+</html>
+

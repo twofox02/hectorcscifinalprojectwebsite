@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #0a0e1a;
+    color: #c0dfff;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 500;
+    line-height: 1.7;
+}
+
+.hero-section {
+    position: relative;
+    height: 800px;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 100px;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(10, 14, 26, 0.65);
+    z-index: 1;
+}
+
+.hero-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    background: rgba(10, 14, 26, 0.85);
+    backdrop-filter: blur(12px);
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(0, 212, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 60px;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 12px 50px;
+    border-radius: 50px;
+    border: 1px solid rgba(0, 212, 255, 0.3);
+}
+
+ul li a {
+    color: #00d4ff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: all 0.3s;
+}
+
+ul li a:hover {
+    color: white;
+    text-shadow: 0 0 15px #00d4ff;
+}
+
+body.scrolled .navbar {
+    padding: 10px 0;
+    background: rgba(10, 14, 26, 0.95);
+}
+
+#section1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+    width: 100%;
+}
+
+.title h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 80px;
+    font-weight: 900;
+    color: #00d4ff;
+    margin: 0;
+    letter-spacing: 8px;
+    text-shadow: 0 0 20px #00d4ff, 0 0 40px #00d4ff;
+}
+
+.content-section {
+    padding: 100px 40px;
+    min-height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0f1629;
+}
+
+.content-section:nth-child(odd) {
+    background: #0b1120;
+}
+
+.text-with-image {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.text-block { 
+    flex: 1; 
+    min-width: 300px; 
+}
+
+.text-block h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 38px;
+    color: #00d4ff;
+    margin-bottom: 25px;
+    text-shadow: 0 0 15px rgba(0, 212, 255, 0.4);
+}
+
+.text-block p {
+    background: rgba(15, 22, 41, 0.8);
+    padding: 35px;
+    border-radius: 16px;
+    font-size: 20px;
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.image-block {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.image-block img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 212, 255, 0.2);
+    border: 2px solid rgba(0, 212, 255, 0.3);
+}
+
+html { 
+    scroll-behavior: smooth; 
+}
+.timeline {
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 999;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.timeline ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.timeline li {
+    margin: 40px 0;
+    color: #444;
+    font-size: 15px;
+    position: relative;
+    padding-left: 35px;
+    transition: all 0.5s ease;
+    opacity: 0.5;
+}
+
+.timeline li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 14px;
+    height: 14px;
+    background: #0a0e1a;
+    border: 3px solid #00d4ff;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 0 20px #00d4ff;
+    transition: all 0.5s;
+}
+
+.timeline li.active {
+    color: #00d4ff;
+    opacity: 1;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.timeline li.active::before {
+    background: #00d4ff;
+    width: 20px;
+    height: 20px;
+    box-shadow: 0 0 35px #00d4ff;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: -60px;
+    bottom: -60px;
+    width: 3px;
+    background: linear-gradient(to bottom, transparent, #00d4ff44, transparent);
+}
